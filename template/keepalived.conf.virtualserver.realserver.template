@@ -1,0 +1,10 @@
+
+    real_server $real_server_ip $real_server_port {
+        weight 3
+        TCP_CHECK {
+            connect_timeout 10
+            nb_get_retry 3
+            delay_before_retry 3
+            connect_port 80
+        }
+    }

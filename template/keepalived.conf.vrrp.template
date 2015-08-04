@@ -1,0 +1,15 @@
+
+vrrp_instance $vrrp_instance {
+    state $state
+    interface $interface
+    virtual_router_id $virtual_router_id
+    priority $priority
+    advert_int 1
+    authentication {
+        auth_type PASS
+        auth_pass 1111
+    }
+    virtual_ipaddress {
+        $vip
+    }
+}

@@ -1,0 +1,9 @@
+
+virtual_server $vip $vport {
+    delay_loop 5
+    lb_algo rr
+    lb_kind DR
+    nat_mask 255.255.255.0
+    persistence_timeout 50
+    protocol TCP
+    
